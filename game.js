@@ -28,20 +28,25 @@ choices.map((answers, choiceIndex) => {
     answers.innerHTML=`${mainQuestions[currentQuestion].possible_answers[choiceIndex]}` //pulls in answer choices to page
 answers.onclick = function(){
 console.log(choiceIndex)
-answerQuestion(`${mainQuestions[currentQuestion].possible_answers[choiceIndex]}`, currentQuestion, mainQuestions) //activates function and checks all the work
+answerQuestion(`${mainQuestions[currentQuestion].possible_answers[choiceIndex]}`, currentQuestion, mainQuestions, choiceIndex) //activates function and checks all the work
 }
 
 }) 
 
 }
-function answerQuestion(selectedAnswer, questionNumber, quiz){ 
+function answerQuestion(selectedAnswer, questionNumber, quiz, button){ 
     if (selectedAnswer===quiz[questionNumber].correct_answer){ //finds correct/incorrect answers
-        console.log("correct")
+        choices[button].classList.add("correct")
+        score+=100
+        scoreText.innerHTML=score
     } else {
+        choices[button].classList.add("incorrect")
         console.log("wrong")
     }
     console.log(questionNumber)
     if (questionNumber+1 < quiz.length){  //whether they get it right or worng, it's going to continue to loop until max questions has been reached(20)
+        choices[button].classList.remove("incorrect")
+        choices[button].classList.remove("correct")
         showQuestions (questionNumber+1, quiz)
     }
 //need answer that was pulled
@@ -87,3 +92,4 @@ fetch(
 //         }
 //     }
 // }
+
