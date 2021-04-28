@@ -26,12 +26,27 @@ question.innerHTML=theQuestion.question //pulls in the question to the site
 choices.map((answers, choiceIndex) => {
     // answers.innerHTML=choiceIndex //inserted index number from choices
     answers.innerHTML=`${mainQuestions[currentQuestion].possible_answers[choiceIndex]}` //pulls in answer choices to page
-}) 
+answers.onclick = function(){
+console.log(choiceIndex)
+answerQuestion(`${mainQuestions[currentQuestion].possible_answers[choiceIndex]}`, currentQuestion, mainQuestions) //activates function and checks all the work
 }
-function answerQuestion(){
-//turns answer red or green dpeending on whether you get it right or not.
-// if question is correct then turn button that was clicked green
-// else turn button red
+
+}) 
+
+}
+function answerQuestion(selectedAnswer, questionNumber, quiz){ 
+    if (selectedAnswer===quiz[questionNumber].correct_answer){ //finds correct/incorrect answers
+        console.log("correct")
+    } else {
+        console.log("wrong")
+    }
+    console.log(questionNumber)
+    if (questionNumber+1 < quiz.length){  //whether they get it right or worng, it's going to continue to loop until max questions has been reached(20)
+        showQuestions (questionNumber+1, quiz)
+    }
+//need answer that was pulled
+//need what question are you on 
+//need where are you in the quiz and your answer
 }
 
 function highScore (){
@@ -60,3 +75,15 @@ fetch(
     }).catch(err=>console.log(err)) //whatever error messages that happen, shows it
 //    console.log(questions)
 
+
+// function showResults(){
+//     for(let i=0; i<theAnswers.length; i++) {
+//         if(theAnswers[i].checked) {
+//             if (theAnswers[i].value==myQuestions[counter].correctAnswer){
+//                 console.log("it works")
+//             } else {
+//                 console.log("false")
+//             }
+//         }
+//     }
+// }
