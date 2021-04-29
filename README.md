@@ -62,9 +62,9 @@ After the questions and answers were appearing on the page, I added a function s
   }
 ```
 
-If you get the question correct, the button lights up green
+If you get the question correct, the button lights up green and 100pts is added to your score.
 ![Correct](correct.png)
-If you get the question wrong, the button lights up red.
+If you get the question wrong, the button lights up red and zero points are added to your score.
 ![incorrect](Incorrect.png)
 
 The last part of this project was adding a modal to display whether you won or lost.
