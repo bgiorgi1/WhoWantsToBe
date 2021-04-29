@@ -3,7 +3,10 @@ const choices = Array.from(document.getElementsByClassName("choice-text")); //pu
 const progressText = document.getElementById("progressText"); //pulls in progress bar text "question 1/10"
 const scoreText = document.getElementById("score"); //pulls in display score
 const progressBarFull = document.getElementById("progressBarFull"); //pulls in progress bar
-const nextButton = document.getElementById("nextButton")
+const nextButton = document.getElementById("nextButton");
+let modal = document.getElementById("myModal");
+let modalText = document.getElementById("modalText");
+let span = document.getElementsByClassName("close")[0];
 let currentQuestion = 0;
 let acceptingAnswers = false;
 let gameIndex = 0;
@@ -54,13 +57,14 @@ function answerQuestion(selectedAnswer, questionNumber, quiz, button) {
 }
 
   function clickNext(questionNumber, quiz){
-    if (questionNumber + 1 < quiz.length) {
+    if (questionNumber + 1 < 10) { //quiz.length
         //whether they get it right or worng, it's going to continue to loop until max questions has been reached(20)
         for(let i=0; i<choices.length; i++) {
             choices[i].classList.remove("incorrect");
             choices[i].classList.remove("correct");
-        }
-        showQuestions(questionNumber + 1, quiz);
+        } showQuestions(questionNumber + 1, quiz);
+      } else {
+          gameFinal ()
       }
   }
 
@@ -87,8 +91,38 @@ fetch(
 //    console.log(questions)
 
 
-var myVar;
 
-function myStartFunction() {
-  myVar = setInterval(function(){ alertFunc("First param", "Second param"); }, 2000);
+function gameFinal (){
+    if (score >= 500){
+    modalText.textContent = "You Win"
+    modal.style.display = "block";
+} else {
+    modalText.textContent = "You Lose"
+    modal.style.display = "block";
 }
+}
+
+
+
+// var myVar;
+
+// function myStartFunction() {
+//   myVar = setInterval(function(){ alertFunc("First param", "Second param"); }, 2000);
+// }
+// When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//     modal.style.display = "block";
+//     modal.innerHTML = myModal;
+//   }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

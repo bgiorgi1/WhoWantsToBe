@@ -18,7 +18,7 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. Yesturday I found some really amazing tutorials that I applied to the skeleton of my project
+1. Yesterday I found some really amazing tutorials that I applied to the skeleton of my project
 2. My goal today is to rewrite code so it makes sense to me
 3. My knowledge of functions and logic is my blocker.
 
@@ -26,7 +26,7 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. Yesturday we were able to get my API to fetch, so now we're working on getting the answers and questions to appear
+1. Yesterday we were able to get my API to fetch, so now we're working on getting the answers and questions to appear
 2. My goal today is to have a working trivia game
 3. My brain is my only blocker and still struggling with a lot of the application of what weve learned, but i also feel really supported by Paula and team so getting through it..
 
@@ -34,9 +34,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. Yesterday we worked on getting the data from the api to show on the page and changing colors of buttons depending on if answer was correct/incorrect
+2. Goals for today are to make an end page that says "you win/lost" depending on score.  I really want to focus again on not being frustrated with my progress and taking deeep breathes.  I'm looking forward to learning how to deploy
+3. not knowing how to code.
 
 # Friday
 - [x] What did you achieve yesterday?
