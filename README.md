@@ -32,10 +32,37 @@ Images of the start up screen go here
 # HOW IT WORKS
 How the game works will go here
 Code snippets go here
-1) If you get the question correct, the button lights up green
+After the questions were complete, I added a function so that they would light up green or red depending on whether your answer was correct or not:
+```javascript
+ function clickNext(questionNumber, quiz){
+    if (questionNumber + 1 < 10) { //quiz.length
+        //whether they get it right or worng, it's going to continue to loop until max questions has been reached(10)
+        for(let i=0; i<choices.length; i++) {
+            choices[i].classList.remove("incorrect");
+            choices[i].classList.remove("correct");
+        } showQuestions(questionNumber + 1, quiz);
+      } else {
+          gameFinal ()
+      }
+  }
+```
+If you get the question correct, the button lights up green
 ![Correct](correct.png)
 If you get the question wrong, the button lights up red.
 ![incorrect](Incorrect.png)
+
+The last part of this project was adding a modal to display whether you won or lost.
+```javascript
+function gameFinal (){
+    if (score >= 500){
+    modalText.textContent = "You Win! You are a software engineer!"
+    modal.style.display = "block";
+} else {
+    modalText.textContent = "You Lose!"
+    modal.style.display = "block";
+}
+}
+```
 If you lose the game, You recieve a message that you lost, with a button to try again.
 ![youlost](Youlost.png)
 If you win the game, you recieve a message that you won, with a button to try again.
@@ -43,7 +70,10 @@ If you win the game, you recieve a message that you won, with a button to try ag
 
 
 # FUTURE CONSIDERATIONS
-Going forward I would like to add a progress bar in the upper left hand corner that visually relects how many questions you have left.  I would also like to add a high scores page and a timer.
+Going forward I would like to add:
+-[] A progress bar in the upper left hand corner that visually relects how many questions you have left.
+-[] A high score end page
+-[] A timer to complete the game in less than 2 minutes
 
 # PROCESS WORK
 
