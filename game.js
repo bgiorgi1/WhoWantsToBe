@@ -57,7 +57,7 @@ function answerQuestion(selectedAnswer, questionNumber, quiz, button) {
 }
 
   function clickNext(questionNumber, quiz){
-    if (questionNumber + 1 < 2) { //quiz.length
+    if (questionNumber + 1 < 10) { //quiz.length
         //whether they get it right or worng, it's going to continue to loop until max questions has been reached(20)
         for(let i=0; i<choices.length; i++) {
             choices[i].classList.remove("incorrect");
@@ -97,7 +97,7 @@ function gameFinal (){
     modalText.textContent = "You Win! You are a software engineer!"
     modal.style.display = "block";
 } else {
-    modalText.textContent = "You Lose! You're not there yet, try again."
+    modalText.textContent = "You Lose!"
     modal.style.display = "block";
 }
 }
