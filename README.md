@@ -26,7 +26,9 @@ This game is played by:
 This project was created using HTML,CSS, and Javascript.
 
 # HOW IT WORKS
-One of the first tasks was fetching the API I wanted to use and making that information come to life on the page.  Here's how I did it:
+A series of computer based questions are randomly asked via the API https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple
+source: https://opentdb.com/api_config.phpOne 
+This being the case, one of the first tasks was fetching the API I wanted to use and making that information come to life on the page.  Here's how I did it:
 ```Javascript
 fetch(
   "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple"
