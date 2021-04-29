@@ -64,9 +64,9 @@ If you win the game, you recieve a message that you won, with a button to try ag
 
 # FUTURE CONSIDERATIONS
 Going forward I would like to add:
-[] A progress bar in the upper left hand corner that visually relects how many questions you have left.
-[] A high score end page
-[] A timer to complete the game in less than 2 minutes
+*[] A progress bar in the upper left hand corner that visually relects how many questions you have left.
+*[] A high score end page
+*[] A timer to complete the game in less than 2 minutes
 
 # PROCESS WORK
 
