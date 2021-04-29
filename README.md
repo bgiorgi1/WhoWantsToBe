@@ -1,5 +1,5 @@
 # Who Wants To Be a Software Engineer?
-Who Wants To Be a Software Engineer (WWTBSE) is a single player trivia game, that you can win by getting at least 5 questions right/recieve a score of 500 and above. 
+Who Wants To Be a Software Engineer (WWTBSE) is a single player trivia game, that you can win by getting at least 5 questions right/receive a score of 500 and above. 
 
 Access the live deployed game:
 https://bgiorgi1.github.io/WhoWantsToBe/
@@ -26,8 +26,10 @@ This game is played by:
 This project was created using HTML,CSS, and Javascript.
 
 # HOW IT WORKS
+
+### FETCH API
 A series of computer based questions are randomly asked via the API Open Trivis Database: https://opentdb.com/api_config.php
-This being the case, one of the first tasks was fetching the API I wanted to use and making that information come to life on the page.  Here's how I did it:
+One of the first tasks was fetching the API I wanted to use and making that information come to life on the page. 
 ```Javascript
 fetch(
   "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple"
@@ -49,6 +51,7 @@ fetch(
     showQuestions(0, questions);
   })
 ```
+### BUTTONS + SCORE
 After the questions and answers were appearing on the page, I added a function so that they would light up green or red depending on whether your answer was correct or not.  This function also shows how the questions are being scored (for every question right, you receieve 100pts).
 ```javascript
  function answerQuestion(selectedAnswer, questionNumber, quiz, button) {
@@ -68,6 +71,7 @@ If you get the question correct, the button lights up green and 100pts is added 
 If you get the question wrong, the button lights up red and zero points are added to your score.
 ![incorrect](Incorrect.png)
 
+### MODAL
 The last part of this project was adding a modal to display whether you won or lost.
 ```javascript
 function gameFinal (){
@@ -98,7 +102,7 @@ Going forward I would like to add:
 ## ISSUES
 There exists functional issues within the game that need to be fixed, such as:
 * When an answer is selected, you can continue to select all the answers until you get it right.
-* Progress bar and high score players functionallity does not work.  HTML and CSS is built out to support those two features, but I didn't have enough time to complete.
+* Progress bar and high score players functionallity does not work.  HTML and CSS is built out to support those two features, but are not functioning yet.
 
 
 
