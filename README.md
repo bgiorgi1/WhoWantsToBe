@@ -26,21 +26,20 @@ This game is played by:
 This project was created using HTML,CSS, and Javascript.
 
 # HOW IT WORKS
-A series of computer based questions are randomly asked via the API https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple
-source: https://opentdb.com/api_config.phpOne 
+A series of computer based questions are randomly asked via the API Open Trivis Database: https://opentdb.com/api_config.php
 This being the case, one of the first tasks was fetching the API I wanted to use and making that information come to life on the page.  Here's how I did it:
 ```Javascript
 fetch(
   "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple"
 )
   .then((res) => {
-    return res.json();
+    return res.json();// making connectiong to API/calling API
   })
   .then((loadedQuestions) => {
-    //    return questions = loadedQuestions.results.map(loadedQuestion => loadedQuestion);
+    // getting the information back and  making a connection and manipulating it to display on game
     for (let i = 0; i < loadedQuestions.results.length; i++) {
       loadedQuestions.results[i]["possible_answers"] =
-        loadedQuestions.results[i]["incorrect_answers"]; //this shows loadedquestions as possible answers
+        loadedQuestions.results[i]["incorrect_answers"];
       loadedQuestions.results[i]["possible_answers"].push(
         loadedQuestions.results[i]["correct_answer"]
       ); //pushing correct answer to array
@@ -91,7 +90,7 @@ The goal from the beginning was to have a beautifully designed trivia game, base
 
 ## FUTURE CONSIDERATIONS
 Going forward I would like to add:
-* A progress bar in the upper left hand corner that visually relects how many questions you have left
+* A progress bar in the upper left hand corner that visually reflects how many questions you have left
 * A high score end page
 * A timer to complete the game in less than 2 minutes
 * WWTBM audio
