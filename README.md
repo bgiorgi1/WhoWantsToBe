@@ -1,7 +1,4 @@
 # Who Wants To Be a Software Engineer?
-
-Explanation of the game that was built and the deployed link will go here.
-
 Who Wants To Be a Software Engineer (WWTBSE) is a single player trivia game, that you can win by getting at least 5 questions right/recieve a score of 500 and above. 
 
 Access the live deployed game:
@@ -24,6 +21,9 @@ This game is played by:
 1. *`Fork`* and *`Clone`* this respository to your local machine
 2. Open `index.html` in your browser to play or 
 3. Open the directory in your text editor of choice to view or edit the code
+
+## LANGUAGES USED
+This project was created using HTML,CSS, and Javascript.
 
 # HOW IT WORKS
 One of the first tasks was fetching the API I wanted to use and making that information come to life on the page.  Here's how I did it:
@@ -84,12 +84,20 @@ If you lose the game, You receive a message that you lost, with a button to try 
 If you win the game, you receive a message that you won, with a button to try again.
 ![youwin](youwin.png)
 
+# PROJECT HISTORY
+The goal from the beginning was to have a beautifully designed trivia game, based off the TV show, "Who Wants To Be a Millionare".  Though the game works succesfully, there are additional features I would like to add down the line.
 
-# FUTURE CONSIDERATIONS
+## FUTURE CONSIDERATIONS
 Going forward I would like to add:
-* A progress bar in the upper left hand corner that visually relects how many questions you have left.
+* A progress bar in the upper left hand corner that visually relects how many questions you have left
 * A high score end page
 * A timer to complete the game in less than 2 minutes
+* WWTBM audio
+
+## ISSUES
+There exists functional issues within the game that need to be fixed, such as:
+* When an answer is selected, you can continue to select all the answers until you get it right.
+* Progress bar and high score players functionallity does not work.  HTML and CSS is built out to support those two features, but I didn't have enough time to complete.
 
 
 
