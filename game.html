@@ -13,20 +13,14 @@
       <div id="game" class="justify-center flex-column">
         <div id="hud">
           <div id="hud-item">
-            <p id="progressText" class="hud-prefix">
-              Question
-            </p>
+            <p id="progressText" class="hud-prefix">Question</p>
             <div id="progressBar">
               <div id="progressBarFull"></div>
             </div>
           </div>
           <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" id="score">0</h1>
           </div>
         </div>
         <h2 id="question">What is the answer to this questions?</h2>
@@ -47,18 +41,16 @@
           <p class="choice-text" data-number="4">Choice 4</p>
         </div>
         <button id="nextButton">Next</button>
-       
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id = "modalText">You WON & LOST! </p>
-  </div>
-
-</div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText">You WON & LOST!</p>
+            <a class="btn" id= "tryAgain" href="game.html">Try Again</a>
+          </div>
+        </div>
       </div>
     </div>
     <script src="game.js"></script>
